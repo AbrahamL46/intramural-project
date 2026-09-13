@@ -1,0 +1,11 @@
+#python virtual environment
+.venv/
+
+#python cache
+__pycache__/
+
+#local test videos
+videos/
+
+#generated program output
+output/
