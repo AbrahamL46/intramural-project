@@ -2,15 +2,18 @@
 
 Lil side project to analyze soccer training footage using computer vision
 
-## Current Goal
+## Main Goal
 
-Analyze shooting practice footage by detecting and tracking soccer balls and 
-determining shot placement
+Analyze practice footage by detecting and tracking soccer balls
 
-## Requirements
+## Current Progress
 
-- Python 3
-- Git
+Currently the program can:
+
+- Read video using OpenCV
+- Run pretrained YOLO object detection
+- Detect people and soccer balls in the video
+- Display YOLO bounding boxes and confidence scores
 
 ## Setup
 
@@ -44,4 +47,15 @@ Videos are ignored by Git and will not be uploaded to the repo
 
     python test_opencv.py
 
-Press 'q' while the video window is selected to stop video playback
+### 7. Run YOLO test
+
+Update video path inside 'test_yolo.py' to match your filename, then run:
+
+    python test_yolo.py
+
+YOLO should display the video with detected objects and bounding boxes
+
+## Current Goal
+
+Test YOLO on real soccer shooting footage and determine how reliably it 
+detects a moving soccer ball
