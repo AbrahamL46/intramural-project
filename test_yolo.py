@@ -4,7 +4,7 @@ from ultralytics import YOLO
 model = YOLO("yolo11n.pt")
 
 #run detection on a video
-results = model("videos/abrahamtrainingtest.mov", show=True, stream=True)
+results = model("videos/shot1leftbehindtrimmed.mov", show=True, stream=True, imgsz=1280)
 
 for result in results:
     for box in result.boxes:
