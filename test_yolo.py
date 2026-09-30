@@ -1,10 +1,11 @@
 from ultralytics import YOLO
 
-#load small pretrained YOLO model
-model = YOLO("yolo11n.pt")
+#load a pretrained YOLO model
+model = YOLO("yolo11s.pt")
 
 #run detection on a video
-results = model("videos/shot1leftbehindtrimmed.mov", show=True, stream=True, imgsz=1280)
+results = model("videos/shot1leftbehindtrimmed.mov", show=True, stream=True, 
+                imgsz=1280, conf=0.5)
 
 for result in results:
     for box in result.boxes:
